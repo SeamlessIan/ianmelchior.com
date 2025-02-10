@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Work</title>
     <style>
         * {
             margin: 0;
@@ -13,46 +13,81 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #fff;
+            line-height: 1.6;
+            color: #000;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
-        nav {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
             text-align: center;
         }
 
-        a {
-            color: #000;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 400;
-            transition: opacity 0.2s ease;
+        p {
+            margin-bottom: 2rem;
         }
 
-        a:hover {
-            opacity: 0.7;
+        .clients {
+            margin-top: 3rem;
         }
 
-        /* Ensure the page takes up full height on mobile */
-        @media (max-height: 500px) {
-            body {
-                min-height: 100vh;
+        .client {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .client img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .client-name {
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .client {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="/about">About</a>
-        <a href="/work">Work</a>
-        <a href="/iancyclopedia">Iancyclopedia</a>
-        <a href="/contact">Contact</a>
-    </nav>
+    <h1>Work</h1>
+    
+    <p>My web development work is done under Auxiliary Brain, LLC. Here are some of my clients:</p>
+
+    <div class="clients">
+        <div class="client">
+            <img src="/client-images/capitol-corridor.jpg" alt="Capitol Corridor Joint Powers Authority">
+            <div class="client-name">Capitol Corridor Joint Powers Authority</div>
+        </div>
+
+        <div class="client">
+            <img src="/client-images/restor.jpg" alt="Restor Medical Spa">
+            <div class="client-name">Restor Medical Spa</div>
+        </div>
+
+        <div class="client">
+            <img src="/client-images/valdez.jpg" alt="Valdez for Colorado">
+            <div class="client-name">Valdez for Colorado</div>
+        </div>
+
+        <div class="client">
+            <img src="/client-images/vail.jpg" alt="Vail Resorts Retail">
+            <div class="client-name">Vail Resorts Retail</div>
+        </div>
+    </div>
+
+    <p>Contact me if there is something I can help you with.</p>
 </body>
 </html>
