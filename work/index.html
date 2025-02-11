@@ -1,40 +1,180 @@
----
-layout: default
-title: Work
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<h1>Work</h1>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            background-color: #fdfdfd;
+        }
 
-<p>My web development work is done under Auxiliary Brain, LLC. Here are some of my clients:</p>
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
 
-<div class="clients">
-    <div class="client">
-        <div class="client-name">Capitol Corridor Joint Powers Authority</div>
-        <div class="client-logo">
-            <img src="/client-images/Logo_Capitol_Corridor_03.png" alt="Capitol Corridor Joint Powers Authority logo">
-        </div>
-    </div>
-      <div class="client">
-        <div class="client-name">Restor Medical Spa</div>
-        <div class="client-logo">
-            <img src="/client-images/restor logo.png" alt="Restor Medical Spa logo">
-        </div>
-    </div>
+        .site-nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 400;
+            transition: all 0.2s ease;
+            padding-bottom: 0.2rem;
+            border-bottom: 2px solid transparent;
+        }
 
-    <div class="client">
-        <div class="client-name">Valdez for Colorado</div>
-        <div class="client-logo">
-            <img src="/client-images/Valdez-Logo_pride.jpeg" alt="Valdez for Colorado logo">
-        </div>
-    </div>
+        .site-nav a:hover {
+            border-bottom: 2px solid #333;
+        }
 
-    <div class="client">
-        <div class="client-name">Vail Resorts Retail</div>
-        <div class="client-logo">
-            <img src="/client-images/Vail Resorts Retail logo.jpg" alt="Vail Resorts Retail logo">
-        </div>
-    </div>
+        h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            color: #222;
+        }
+
+        p {
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .clients {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .client {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .client:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+
+        .client:nth-child(odd) {
+            background: #fafafa;
+        }
+
+        .client-logo {
+            width: auto;
+            height: 90px;
+            flex-shrink: 0;
+            order: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .client-logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .client-name {
+            font-size: 1.25rem;
+            font-weight: 500;
+            order: 1;
+            flex-grow: 1;
+            color: #222;
+        }
+
+        @media (max-width: 700px) {
+            .client {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+            
+            .client-logo {
+                height: 70px;
+                order: 1;
+            }
+
+            .client-name {
+                order: 2;
+            }
+
+            .site-nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <a href="/work">Work</a>
+        <a href="/iancyclopedia">Iancyclopedia</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <h1>Work</h1>
     
-</div>
+    <p>My web development work is done under Auxiliary Brain, LLC. Here are some of my clients:</p>
 
-<p>Contact me if there is something I can help you with.</p>
+    <div class="clients">
+        <div class="client">
+            <div class="client-name">Capitol Corridor Joint Powers Authority</div>
+            <div class="client-logo">
+                <img src="/client-images/Logo_Capitol_Corridor_03.png" alt="Capitol Corridor Joint Powers Authority logo">
+            </div>
+        </div>
+
+        <div class="client">
+            <div class="client-name">Restor Medical Spa</div>
+            <div class="client-logo">
+                <img src="/client-images/restor logo.png" alt="Restor Medical Spa logo">
+            </div>
+        </div>
+
+        <div class="client">
+            <div class="client-name">Valdez for Colorado</div>
+            <div class="client-logo">
+                <img src="/client-images/71766 Valdez-Logo_pride.jpeg" alt="Valdez for Colorado logo">
+            </div>
+        </div>
+
+        <div class="client">
+            <div class="client-name">Vail Resorts Retail</div>
+            <div class="client-logo">
+                <img src="/client-images/3922 Vail Resorts Retail logo.jpg" alt="Vail Resorts Retail logo">
+            </div>
+        </div>
+    </div>
+
+    <p>Contact me if there is something I can help you with.</p>
+</body>
+</html>
