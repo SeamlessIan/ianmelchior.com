@@ -55,10 +55,10 @@
             margin: 0 auto;
         }
 
-        #zf_div_B0hqRQW2u-C4WPB8Z4zjBZXyf2StDpb0-gyAweOe0yw iframe {
+        .form-wrapper iframe {
             width: 100%;
+            height: 820px;
             border: none;
-            transition: height 0.3s ease;
         }
 
         @media (max-width: 700px) {
@@ -79,36 +79,11 @@
     <h1>Contact</h1>
 
     <div class="form-wrapper">
-        <div id='zf_div_B0hqRQW2u-C4WPB8Z4zjBZXyf2StDpb0-gyAweOe0yw'></div>
+        <iframe
+            src="https://forms.zohopublic.com/ianmelchior1/form/ianmelchiorcomContactForm/formperma/B0hqRQW2u-C4WPB8Z4zjBZXyf2StDpb0-gyAweOe0yw"
+            aria-label="Contact form"
+            allowfullscreen>
+        </iframe>
     </div>
-
-    <script>
-        (function() {
-            var formId = 'B0hqRQW2u-C4WPB8Z4zjBZXyf2StDpb0-gyAweOe0yw';
-            var divId = 'zf_div_' + formId;
-            var ifrId = 'zf_ifrm_' + formId;
-
-            var ifr = document.createElement('iframe');
-            ifr.id = ifrId;
-            ifr.src = 'https://forms.zohopublic.com/ianmelchior1/form/ianmelchiorcomContactForm/formperma/' + formId;
-            ifr.setAttribute('aria-label', 'Contact form');
-            ifr.setAttribute('allowfullscreen', true);
-            ifr.style.border = 'none';
-            ifr.style.width = '100%';
-            ifr.style.height = '540px';
-
-            document.getElementById(divId).appendChild(ifr);
-
-            window.addEventListener('message', function(e) {
-                var ifrm = document.getElementById(ifrId);
-                if (ifrm && e.source === ifrm.contentWindow) {
-                    var parts = e.data.split('|');
-                    if (ifrm.src.includes('formperma') && ifrm.src.includes(parts[0])) {
-                        ifrm.style.height = (parseInt(parts[1], 10) + 15) + 'px';
-                    }
-                }
-            }, false);
-        })();
-    </script>
 </body>
 </html>
